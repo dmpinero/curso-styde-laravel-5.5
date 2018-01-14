@@ -73,6 +73,10 @@ class UserSeeder extends Seeder
             'profession_id' => $professionId,            
         ]);
 
+        factory(User::class)->create([
+            'profession_id' => $professionId
+        ]);
+
         factory(User::class)->create(); // 1 usuario con todos los datos aleatorios
 
         factory(User::class, 49)->create(); // 49 usuario con todos los datos aleatorios
